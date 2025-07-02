@@ -9,8 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
-import org.springframework.batch.core.repository.ExecutionContextSerializer;
-import org.springframework.batch.core.repository.dao.Jackson2ExecutionContextStringSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -32,10 +30,6 @@ public class BatchJobConfiguration {
     public Map<String, IJobParametersBuilder> batchJobParameterBuilderMap() {
         log.info("making param builder map");
         return new HashMap<>();
-    }
-    
-    public ExecutionContextSerializer jacksonSerializer() {
-        return new Jackson2ExecutionContextStringSerializer();
     }
 
 }
