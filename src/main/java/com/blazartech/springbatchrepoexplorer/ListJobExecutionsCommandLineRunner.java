@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-public class ListJobExecutionsCommandLIneRunner implements CommandLineRunner {
+public class ListJobExecutionsCommandLineRunner implements CommandLineRunner {
 
     @Autowired
     private JobExplorer jobExplorer;
