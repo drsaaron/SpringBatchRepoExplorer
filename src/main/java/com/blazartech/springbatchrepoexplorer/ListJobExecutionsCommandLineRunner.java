@@ -8,8 +8,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.batch.core.JobExecution;
-import org.springframework.batch.core.explore.JobExplorer;
+import org.springframework.batch.core.job.JobExecution;
+import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -23,7 +23,7 @@ import org.springframework.stereotype.Component;
 public class ListJobExecutionsCommandLineRunner implements CommandLineRunner {
 
     @Autowired
-    private JobExplorer jobExplorer;
+    private JobRepository jobExplorer;
 
     // sort executions in descending order by ID so that the most recent is first.
     // shoulnd't be necessary as the repo seems to do so, but be explicit
