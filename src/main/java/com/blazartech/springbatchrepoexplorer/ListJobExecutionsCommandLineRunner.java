@@ -27,7 +27,7 @@ public class ListJobExecutionsCommandLineRunner implements CommandLineRunner {
 
     // sort executions in descending order by ID so that the most recent is first.
     // shoulnd't be necessary as the repo seems to do so, but be explicit
-    private static final Comparator<JobExecution> JOB_EXEC_COMPARATOR = (ex1, ex2) -> ex2.getId().compareTo(ex1.getId());
+    private static final Comparator<JobExecution> JOB_EXEC_COMPARATOR = (ex1, ex2) -> Long.compare(ex2.getId(), ex1.getId());
 
     // log the execution details
     private static final Consumer<JobExecution> JOB_EXECUTION_LOGGER
