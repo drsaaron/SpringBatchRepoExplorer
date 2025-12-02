@@ -4,24 +4,14 @@
  */
 package com.blazartech.springbatchrepoexplorer;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import javax.annotation.PostConstruct;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.batch.core.repository.dao.Jackson2ExecutionContextStringSerializer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.context.event.EventListener;
-import org.springframework.stereotype.Component;
-
 /**
  *
  * @author scott
  */
-@Component
-@Slf4j
+//@Component
+//@Slf4j
 public class SerializerApplicationListener {
-    
+ /*   
     @Autowired
     private Jackson2ExecutionContextStringSerializer jacksonSerializer;
     
@@ -44,5 +34,5 @@ public class SerializerApplicationListener {
         
         objectMapper.registerModule(new JavaTimeModule());
         jacksonSerializer.setObjectMapper(objectMapper);
-    }
+    }*/
 }
